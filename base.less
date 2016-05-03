@@ -1,0 +1,259 @@
+@charset "utf-8";
+html{
+	font-size: 50px;
+	height:100%;
+    width:100%;
+    background:#eee;
+}
+body{
+    width: 100%;
+	max-width: 640px;
+	min-width:320px;
+	min-height: 100%;
+	margin:0 auto;
+	padding:0px;
+	color:#666;
+	font-family:"微软雅黑";
+	font-size: 100%;
+	background: #f8f8f8;
+	overflow-x: hidden;
+    font-size:.24rem;
+}
+h1,h2,h3,h4,h5,h6,
+div,img,p,
+ul,ol,li,dl,dd,dt,
+strong,span,a,em,strong,b,i,
+input,button,select,form,textarea,
+table,tr,th,td{
+	padding:0;
+	margin:0;
+}
+img{
+	border:none;
+}
+ol,ul,dl,li{
+	list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:400;
+}
+a{
+	color:#666;
+	text-decoration:none;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color:transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	outline: none;
+}
+a:link{
+	color:#666;
+}
+a:visited{
+	color:#666;
+}
+a:hover{
+	color:#666;
+	text-decoration:none;
+}
+a:active{
+	color:#666;
+	outline:none
+}
+img{border:none;}
+input,button,textarea,select{
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+	vertical-align:middle;
+	outline:none;
+    border:1px #ccc solid;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    -webkit-tap-highlight-color: transparent;
+    text-indent: 0;
+}
+
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix:after{
+	content:"200B";
+	display:block;
+	height:0;
+	clear:both;
+}
+.clearfix{
+	*zoom:1;
+}
+
+select {
+ 	border: solid 1px #fff;
+	appearance:none;
+  	-moz-appearance:none;
+  	-webkit-appearance:none;
+  	/*background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;*/
+  	padding-right: 1px;
+}
+select::-ms-expand {
+	display:none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+a:active,
+input:focus,
+img:focus{
+	-webkit-tap-highlight-color: transparent;
+}
+
+input[type="number"]{
+	-moz-appearance:textfield;
+}
+
+.dib_wrap,
+.dib_wrap_ul,
+.dib_wrap_p {
+    font-size:0;
+    *word-spacing:-1px;
+}
+.dib_wrap .dib,
+.dib_wrap_ul li,
+.dib_wrap_p a,
+.dib_wrap_p span{
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align:top;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    .dib_wrap,
+    .dib_wrap_ul,
+    .dib_wrap_p{
+        letter-spacing:-5px;
+    }
+}
+.dib_wrap_ul li,
+.dib_wrap_p a,
+.dib_wrap_p span,
+.dib {
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+//边线
+.line_t(@color:#ccc){
+    position:relative;
+    &:before{
+        top:0;
+        border-top:1px solid @color;
+        .line_after_before;
+    }
+}
+.line_b(@color:#ccc){
+    position:relative;
+    &:after{
+        bottom:0;
+        border-bottom:1px solid @color;
+        .line_after_before;
+    }
+}
+.line_l(@color:#ccc){
+    position:relative;
+    &:before{
+        left:0;
+        border-left:1px solid @color;
+        .line_left_right;
+    }
+}
+.line_r(@color:#ccc){
+    position:relative;
+    &:after{
+        right:0;
+        border-right:1px solid @color;
+        .line_left_right;
+    }
+}
+.line_after_before{
+    left:0;
+    content:'';
+    width:100%;
+    position:absolute;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.line_left_right{
+    top:0;
+    content:'';
+    height:100%;
+    position:absolute;
+    -webkit-transform:scaleX(0.5);
+    transform:scaleX(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+@media only screen and (min-width: 360px) {
+	html{
+		font-size: 56.25px;
+	}
+}
+
+@media only screen and (min-width: 375px) {
+	html{
+		font-size: 58.5938px;
+	}
+}
+
+@media only screen and (min-width: 384px) {
+	html{
+		font-size: 60px;
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	html{
+		font-size: 62.5px;
+	}
+}
+
+@media only screen and (min-width: 414px) {
+	html{
+		font-size: 64.6875px;
+	}
+}
+
+@media only screen and (min-width: 424px) {
+	html{
+		font-size: 66.25px;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	html{
+		font-size: 75px;
+	}
+}
+
+@media only screen and (min-width: 540px) {
+	html{
+		font-size: 84.375px;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	html{
+		font-size: 100px;
+	}
+}
